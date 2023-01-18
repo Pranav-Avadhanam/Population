@@ -43,7 +43,7 @@ public class Population
 	{
 		public int compare(City c1, City c2)
 		{
-		//reverse order of compareTo method to sort in descending order
+		//reverse order of compare method to sort in descending order
 			return c2.getCityName().compareTo(c1.getCityName());
 		}	
 	}
@@ -52,7 +52,8 @@ public class Population
 	{
 		public int compare(City c1, City c2)
 		{
-			return c1.getPopulation() - c2.getPopulation();
+			//use default compareTo for population comparison
+			return c1.compareTo(c2);
 		}
 	}
 	
@@ -60,7 +61,7 @@ public class Population
 	{
 		public int compare(City c1, City c2)
 		{
-		//reverse order of compareTo method to sort in descending order
+		//reverse order of compare method to sort in descending order
 			return c2.getPopulation() - c1.getPopulation();
 		}
 	}
